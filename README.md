@@ -91,6 +91,8 @@ In case you are not satisfied with the format of analysis of the contributory RV
 This is to say that, if a RV contributed to the fringe values of a trial in period 1, but not in period 23, for instance, it would still be recorded, along with its contribution. This is to ensure that rogue, but large contributions are not carelessly discarded from potential concern.
 
 As in this case, a whopping 50 periods were simulated, it is understandable to the user, hopefully, that it takes a while to render all of this information and store it, especially, in CSV ( something I wrould not recommend someone do, ever, this was a painful experience in data corruption ).
+
+
 ![snapofperiods](https://user-images.githubusercontent.com/100022747/214088986-a69a95cc-a991-4d20-82ba-3ff4303188a1.PNG)
 
 The simulation itself (the RV sample generating and addition and so forth) merely took 3.83117s, but the exporting of values and so forth for further analysis, which had to be done in a higher level language and regrettably, due to my lack of foresight, in CSV format, which is never something I should've done.
