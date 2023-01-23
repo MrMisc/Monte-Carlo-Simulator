@@ -5,7 +5,7 @@
 
 ## Running the program
 
-Like with most of my programmes, a python file activates the application pipeline ``DataEntryPoint.py``, to open the following UI.
+Like with most of my programmes, type ``py DataEntryPoint.py``, to open the following UI.
 
 ![MonteCarloGUI](https://user-images.githubusercontent.com/100022747/214081219-1c7f8ab6-f29f-43bf-bd14-08bf092d14c8.PNG)
 
