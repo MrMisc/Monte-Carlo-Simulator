@@ -42,7 +42,7 @@ The histogram of the resultant vector of trials and the boxplots for each of the
 
 
 ### Results
-
+### 100 000 trials, 50 periods
 In the sampled picture above, we simulated a combination of a Normal inflow with mean 15.0 and standard deviation of 15.0, together with 2 sources of outflow, a Poisson RV with rate 0.25 but with a constant multiplier of 170.0, and a Cauchy RV with parameters 1.0 and 2.0. This was executed for 100_000 trials (could imagine them as separate people) for 50 periods. In other words, 50 consecutive periods. These periods are continuations from the predecessing periods - so you could in some instance, imagine this being the portfolios of 100_000 people being simulated over the course of say, 50 years as an example.
 
 The printed output immediately shows you the following
@@ -88,7 +88,23 @@ Hopefully, it is equally as apparent, as understandable, that simulating a bunch
 
 The unlogged plots also succintly print out the percentage of trials that fell below 0.0 (the default case set here). 
 
-### Additional analysis
+
+### 100 trials, 50 periods
+
+![Monte_hist](https://user-images.githubusercontent.com/100022747/214094755-bd516fe9-13f1-4aee-a673-8c55d510a56c.png)
+![Monte_kde](https://user-images.githubusercontent.com/100022747/214094762-e7b6170d-ab0d-4701-bbb3-cc6ab920bcc8.png)
+
+
+Alternatively, a more common practice, is often that related professionals often choose to not so intensely simulate large sample sizes to return more observable histograms and their associated plots as the above. However, catching the potential problematic RVs, especially the Cauchy RV become lost in that form of analysis as might be apparent when examining the outputted boxplots.
+
+
+![boxplot1](https://user-images.githubusercontent.com/100022747/214095200-c430959d-efde-4ebb-97f8-5a91245a1756.png)
+
+If you happen to ask why any negatively contributing RVs are even quotable since the histograms above say that ``0.0000% of trials returned values below 0``, note that this is because in those periods, some trials did in fact end up with negative returns in Period 1, but recovered accordingly in the later periods. Remember that the final histogram and KDEs plotted are only after all the periods have been traversed through. 
+
+The central message however, is that limiting analyses to low sample sizes potentially excludes the potentially damaging effects of fringe RV effects, especially the Cauchy distribution in this case!
+
+## Additional analysis
 
 In case you are not satisfied with the format of analysis of the contributory RVs for the fringe values, the CSV files for each period are saved in the directory post-simulation for perusal. Note that this is not a record of the actual trial results for each period, rather they are stores of the contributing RVs to fringe values within each period. They are incrementally built on as well from period to period.
 
@@ -101,7 +117,7 @@ As in this case, a whopping 50 periods were simulated, it is understandable to t
 
 The simulation itself (the RV sample generating and addition and so forth) merely took 3.83117s, but the exporting of values and so forth for further analysis, which had to be done in a higher level language and regrettably, due to my lack of foresight, in CSV format, which is never something I should've done.
 
-### Multi-threading
+## Multi-threading
 
 Multi-threading is by default enabled, and if one wishes to change that, or the number of threads, please be sure to adjust the following segment of code in the main.rs file inside the src directory.
 
