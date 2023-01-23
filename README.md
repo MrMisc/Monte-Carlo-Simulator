@@ -108,6 +108,24 @@ As you can see here, all the seeds in this relatively limited simulation, recove
 ![boxplot25](https://user-images.githubusercontent.com/100022747/214096237-7c2b086a-987c-4073-8259-921ec722d459.png)
 ![boxplot50](https://user-images.githubusercontent.com/100022747/214096247-4ef05dcf-b0d4-4a50-80e6-66456e9b25d7.png)
 
+This is a result of the fact that PER PERIOD, the underlying code checks for each trial's state, and if any of the trials are below the set limit (by default again, 0.0), then and only then, are the associated RV contributions logged and plotted. So by Period 25, all of the trials were at a net positive balance (above the fringe csae - being below 0.0)
+
+```rs
+                    for i in 0..trials{
+                        if flow[i]<stakeholder{
+                            let mut _ve:&mut Vec<Var> = &mut vector_ofvars_pertrial[i];
+                            _ve.sort_by(|a, b| a.value.partial_cmp(&b.value).unwrap());
+                            
+                            for y in _ve{
+                                // println!("{}",y.distribution.clone());
+                                wtr.write_record(&[y.inflow_or_outflow.clone(), y.distribution.clone(), y.value.to_string()]);
+                            }
+                        }
+                    }
+```
+
+Alternatively, if one found that there were in fact negative contributing factors being presented in the final boxplot, then that could mean that there were indeed cases where the fringe cases were triggered, but they happened as below 0.001% case.
+
 
 The central message however, is that limiting analyses to low sample sizes potentially excludes the potentially damaging effects of fringe RV effects, especially the Cauchy distribution in this case!
 
