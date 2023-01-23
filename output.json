@@ -1,0 +1,1 @@
+{"inflows": [["Normal", [15.0, 15.0, 2.0, 100.0]]], "outflows": [["Cauchy", [10.0, 2.0, 2.0, 1.0]], ["Poisson", [0.25, 1.0, 1.0, 170.0]]], "period": 10, "stakeholder": 0.0, "morse": "true", "trials": 100000}
