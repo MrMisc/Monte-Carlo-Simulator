@@ -288,14 +288,14 @@ if PeriodCounter>2:
         plt.clf()
         plt.style.use("fivethirtyeight")
         if len(df)>5:
-            if i==1:sns.boxplot(df['Primaries'], df['Amount'])
-            else:sns.boxplot(df['Primaries'], np.log(df['Amount']+1))
+            if i==1:sns.boxplot(x = df['Primaries'],y =  df['Amount'])
+            else:sns.boxplot(x = df['Primaries'], y = np.log(df['Amount']+1))
         plt.title(f"Primary sources of loss(default)/gain for Period {i}")
         plt.savefig(f"boxplot{i}.png")
         # plt.show()
         if len(df)>5:
-            if i==1:sns.violinplot(df['Primaries'],  df['Amount'])
-            else:sns.violinplot(df['Primaries'], np.log(df['Amount']+1))
+            if i==1:sns.violinplot(x = df['Primaries'], y =  df['Amount'])
+            else:sns.violinplot(x = df['Primaries'], y = np.log(df['Amount']+1))
         plt.title(f"Primary sources of loss(default)/gain for Period {i}")
         plt.savefig(f"violinplot{i}.png")
 
