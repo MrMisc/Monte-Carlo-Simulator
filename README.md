@@ -36,7 +36,7 @@ Breakeven is an option for the user to allocate a limit value for the programme 
 
 Various graphs are outputted and saved after a successful simulation. Chief amongst them being, density plots of the individual trials at the END of all periods (if periods are allocated to be above 1), histograms of the same thing, values which are shifted, and logged, and boxplots of contributory RV components to fringe values for the first, middle and end periods are saved as figures.
 
-NOTE: these images are all deleted and replaced upon re-simulation. Be sure to save them somewhere else if valuable to you!
+**NOTE: these images are all deleted and replaced upon re-simulation. Be sure to save them somewhere else if valuable to you!**
 
 The histogram of the resultant vector of trials and the boxplots for each of the 3 periods are shown as a single plot image at the end.
 
