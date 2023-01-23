@@ -102,6 +102,13 @@ Alternatively, a more common practice, is often that related professionals often
 
 If you happen to ask why any negatively contributing RVs are even quotable since the histograms above say that ``0.0000% of trials returned values below 0``, note that this is because in those periods, some trials did in fact end up with negative returns in Period 1, but recovered accordingly in the later periods. Remember that the final histogram and KDEs plotted are only after all the periods have been traversed through. 
 
+As you can see here, all the seeds in this relatively limited simulation, recovered from their negative returns in the subsequent periods.
+
+
+![boxplot25](https://user-images.githubusercontent.com/100022747/214096237-7c2b086a-987c-4073-8259-921ec722d459.png)
+![boxplot50](https://user-images.githubusercontent.com/100022747/214096247-4ef05dcf-b0d4-4a50-80e6-66456e9b25d7.png)
+
+
 The central message however, is that limiting analyses to low sample sizes potentially excludes the potentially damaging effects of fringe RV effects, especially the Cauchy distribution in this case!
 
 ## Additional analysis
