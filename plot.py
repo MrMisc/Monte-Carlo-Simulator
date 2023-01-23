@@ -51,7 +51,7 @@ else:
     log_special_data = [x for x in log_data if x>np.log(np.abs(min(distr))+1+stakeholder)]
 
 
-prob = float(len(special_data))/float(len(distr))
+prob = float(len(special_data))/float(len(distr))*100.0
 
 #Monte Density plot
 #Since this is a density plot, you do not want to show cut up segments of data ontop of each other, their distirbutions would be different
