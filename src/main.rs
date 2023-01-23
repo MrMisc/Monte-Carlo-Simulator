@@ -67,7 +67,7 @@ fn main() {
 
     
     let mut trials: usize = data.trials.try_into().unwrap();
-    trials /= 16;
+    trials /= 15;
     let mut distributions: Vec<String> = Vec::new();
     let mut parameter_arr: Vec<[f64; 4]> = Vec::new();
     let mut neg_distributions: Vec<String> = Vec::new();
@@ -106,7 +106,7 @@ fn main() {
         wtr.write_record(&["Source Type", "Distribution", "Amount"]);
     }
     thread::scope(|s| {
-        for j in 0..16 {
+        for j in 0..15 {
             let handle = s.spawn(move || {
                 let mut flow: Vec<f64> = Vec::new();
                 let mut vector_ofvars_pertrial: Vec<Vec<Var>> = Vec::new();
