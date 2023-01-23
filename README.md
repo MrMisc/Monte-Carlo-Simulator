@@ -80,7 +80,9 @@ The final distribution of the trials' results are also shown in 4 formats
 #### KDE plot
 ![Monte_kde](https://user-images.githubusercontent.com/100022747/214087730-6ef5eda2-1bd8-4dbf-9266-4ac142f01e2f.png)
 
+Hopefully, it is equally as apparent, as understandable, that simulating a bunch of RVs numerous times with numerous trials tends to lead to very spiky and unreadable trial results in histogram and KDE format. This is simply because most Monte Carlo simulations that people would typically be concerned with are fringe situations, and that can only be revealed by repeating an obscene amount of trials and sieving out the exceptional circumstances or the unforeseeable ones.
 
+The unlogged plots also succintly print out the percentage of trials that fell below 0.0 (the default case set here). 
 
 ### Additional analysis
 
@@ -91,7 +93,7 @@ This is to say that, if a RV contributed to the fringe values of a trial in peri
 As in this case, a whopping 50 periods were simulated, it is understandable to the user, hopefully, that it takes a while to render all of this information and store it, especially, in CSV ( something I wrould not recommend someone do, ever, this was a painful experience in data corruption ).
 ![snapofperiods](https://user-images.githubusercontent.com/100022747/214088986-a69a95cc-a991-4d20-82ba-3ff4303188a1.PNG)
 
-
+The simulation itself (the RV sample generating and addition and so forth) merely took 3.83117s, but the exporting of values and so forth for further analysis, which had to be done in a higher level language and regrettably, due to my lack of foresight, in CSV format, which is never something I should've done.
 
 ### Multi-threading
 
