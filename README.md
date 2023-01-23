@@ -148,6 +148,8 @@ Multi-threading is by default enabled, and if one wishes to change that, or the 
 
 
 
+Lines 90 and 109, are the lines you would change accordingly. By default, this programme runs on 15 threads (ideally in parallel , depending on hardware).
+
 
 
 
