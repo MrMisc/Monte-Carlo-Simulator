@@ -7,7 +7,7 @@
 
 Like with most of my programmes, a python file activates the application pipeline ``DataEntryPoint.py``, to open the following UI.
 
-![MonteCarloGUI](https://user-images.githubusercontent.com/100022747/214065038-16fccd8b-4061-4d07-84b1-42ba80858e9d.PNG)
+![MonteCarloGUI](https://user-images.githubusercontent.com/100022747/214081219-1c7f8ab6-f29f-43bf-bd14-08bf092d14c8.PNG)
 
 As stated before, this is merely for simple linear combinations of random variables, not non-linear configurations. So for example, if you wanted to model the distribution of say the product of a Poisson and a Normal distribution, this would not be an available solution for you. I would encourage in that case, to simply model it and appreciate the process of it yourself in your appropriate language!
 
