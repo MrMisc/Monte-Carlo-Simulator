@@ -17,6 +17,10 @@ Likewise, if you happen to be looking for more than 7 inflow and outflow RVs eac
 
 The available choice of distributions are in the drop down menus. Parameters are to be typed in and separated by commas. So for instance, the Cauchy distribution, iirc, requires 2 parameters (eg 1.0,2.0 as a simple example), while something like the Triangular distribution would require 3 parameters (eg 1.0,3.0,2.0).
 
+
+![avai](https://user-images.githubusercontent.com/100022747/214092212-1cdb08b4-0c42-475a-8896-4f0ec4a4f913.PNG)
+
+
 There is an addition functionality that was deemed essential and was hence added to the parameter bar. For all distributions, regardless of number of parameters required for the actual probability distribution, the user is able to indicate a 4th constant float parameter to multiply with the random variable. As an example, if you wanted to model the potential for the occassional large expense related to for instance, medical bills, and had an estimate of each medical incident in your portfolio costing you about 1000 dollars, at a rate of 0.0166, you would choose ``Poisson`` and type out something along the lines - 0.0166,1.0,1.0,1000.0. The 1.0s inside the parameter are of no significance and could have been any other float values, since Poisson only requires one value, the first value in the Parameter array that we have - the rate of incidence.
 
 ### Periods
